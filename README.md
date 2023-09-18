@@ -28,8 +28,9 @@ pip install -r requirements.txt
 
 3. **Deploy Lambda**: Deploy the `lambda_function.py` to AWS Lambda.
 4. **Run Streamlit App**: In the root directory, execute:
-
+```
 streamlit run streamlit_app/app.py
+```
 
 ## Contributing 🤝
 
