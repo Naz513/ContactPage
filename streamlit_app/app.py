@@ -1,5 +1,8 @@
 import streamlit as st
 import requests
+import os
+
+API_ENDPOINT = os.environ.get('API_GATEWAY_ENDPOINT')
 
 st.title('Contact Page')
 
@@ -17,7 +20,7 @@ if st.button('Send'):
     }
 
     # Triggering the lambda function via the API Gateway endpoint
-    response = requests.post('YOUR_API_GATEWAY_ENDPOINT', json=data)
+    response = requests.post('API_ENDPOINT', json=data)
 
     # Checking if email was sent successfully
     if response.status_code == 200:
